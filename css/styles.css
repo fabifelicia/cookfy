@@ -12,5 +12,16 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
+}
+
+body {
+    background-color: var(--light-peach);
+    display: flex;
+}
+
+
+#logo {
+    width: 67.5px;
+    height: 27px;
 }
