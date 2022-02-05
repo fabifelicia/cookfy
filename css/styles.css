@@ -149,6 +149,27 @@ section {
 
 .element-1 {
     width: 302.1px;
-    height: 220.5px;   
+    height: 220.5px;
+       
     
+}
+
+.images-section {
+    cursor: pointer;
+}
+
+.images-section, .element-1 {
+    position: relative;
+    top: 0;
+    left: 0;    
+}
+
+.food-plate-1 {
+    position: absolute;
+    top: 20px;
+    left: 45px;
+}
+
+footer {
+    height: 122px;
 }
