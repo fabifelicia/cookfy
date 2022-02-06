@@ -182,9 +182,10 @@ footer img {
     position: relative;   
 }
 
-.footer-container {
+
+.footer-description {
     position: absolute;
-    top: 500px;
+    top: 530px;
     margin-left: 203px;
     display: flex;
     align-items: center;
@@ -196,14 +197,26 @@ footer img {
     font-family: Helvetica, Arial, sans-serif;
     line-height: 10px;
     color: var(--black);
-    margin-left: 20px;
-    margin-top: 5px;
+    margin: 10px 0 0 20px;
+    
+    
 }
 
 .footer-icon {
-    width: 14px;
-    height: 14px;
-    padding: 10px;
-    background-color: #0f0
+    position: absolute;
+    top: 536px;
+    right: 300px;         
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+
+.icon {
+    width: 14.5px;
+    height: 14.5px;
+    margin: 0 0 0 17px;
 }
 
