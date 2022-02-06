@@ -231,9 +231,11 @@ section {
     margin: 5px 0;
 }
 
+
 .star-classification {
     width: 8px;
     height: 7.6px;
+    
 }
 
 .star-classification:nth-child(4), 
@@ -241,6 +243,35 @@ section {
 .star-classification:last-child {
     opacity: 0.1;
 }
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    padding: 11px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: none;
+    box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16); 
+    display: inline-flex;
+    cursor: pointer;    
+}
+
+.btn-circle:first-child {
+    margin-right: 10px;
+}
+
+.btn-circle:hover {
+    background-color: var(--red);
+}
+
+.arrow {
+    width: 8px;
+    height: 8px;
+}
+
+
+
 
 footer {
     width: 960px;
