@@ -27,8 +27,7 @@ body {
     background-color: var(--light-peach);   
     display: block;       
     width: 100vw;
-    height: 386px;
-    margin: 0 0 45.5px;
+    height: 386px;    
     padding: 24px 84px 57.4px 40.1px;
 }
 
@@ -107,7 +106,6 @@ section {
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 20px;    
-    
 }
 
 .title {
@@ -115,12 +113,10 @@ section {
     font-weight: 700;
     font-size: 1.75rem;
     line-height: 37.5px;
-    
 }
 
 .name {
     color: var(--red);    
-    
 }
 
 .description {
@@ -139,19 +135,15 @@ section {
     color: var(--red);
 }
 
-
 .element-2 {
     width: 137.5px;
     height: 136.8px;
     margin-top: 30px;
-    
 }
 
 .element-1 {
     width: 302.1px;
-    height: 220.5px;
-       
-    
+    height: 220.5px;      
 }
 
 .images-section {
@@ -161,27 +153,49 @@ section {
 .images-section, .element-1 {
     position: relative;
     top: 0;
-    left: 0;    
+    left: -20px;    
 }
 
 .food-plate-1 {
     position: absolute;
     top: 20px;
-    left: 45px;
+    left: 25px;
+}
+
+.container {
+    display: block;       
+    width: 100vw;
+    height: 386px;    
+    padding: 24px 84px 57.4px 40.1px;   
+}
+
+.main-title {
+    text-align: center;
+    width: 272px;
+    height: 80px;
+    margin-top: 10px;
+    position: absolute;
+    left: 40%;
+}
+
+.right-image {
+    width: 80px;
+    height: 80px;
+    position:absolute;
+    top: 490px;
+    right: 70px;
+
 }
 
 footer {
     width: 960px;
-    height: 122px;    
-    
-    
+    height: 122px;   
 }
 
 footer img {
     width: 100vw;
     position: relative;   
 }
-
 
 .footer-description {
     position: absolute;
@@ -197,9 +211,7 @@ footer img {
     font-family: Helvetica, Arial, sans-serif;
     line-height: 10px;
     color: var(--black);
-    margin: 10px 0 0 20px;
-    
-    
+    margin: 10px 0 0 20px;   
 }
 
 .footer-icon {
@@ -211,8 +223,6 @@ footer img {
     justify-content: space-between;
     cursor: pointer;
 }
-
-
 
 .icon {
     width: 14.5px;
