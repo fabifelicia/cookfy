@@ -21,17 +21,17 @@ async function getUser() {
 }
 
 
+
+
 async function User() {
     const user = await getUser()
     const { gender, name, phone, email, picture }  = user 
     
     loginUser(name.first)
-    photo(picture.thumbnail)
-
+    photo(picture.thumbnail)    
     
     
-    
-    console.log(gender, name.last, phone, email, picture.medium)
+    console.log(gender, name.last, phone, email)
 }
    
 User()
