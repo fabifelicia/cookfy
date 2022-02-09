@@ -16,7 +16,7 @@ This is a solution to the [Celero](https://celero.com.br/) challenge - Web Devel
 
 ### Links
 
-- Solution URL: (https://github.com/fabifelicia/qr-code-component)
+- Solution URL: (https://github.com/fabifelicia/cookfy)
 - Live Site URL: (https://cookfy.vercel.app/)
 
 
@@ -31,21 +31,5 @@ This is a solution to the [Celero](https://celero.com.br/) challenge - Web Devel
 ## Author
 
 - Fabiana Barreto - [@fabifelicia](https://github.com/fabifelicia)
-
-
-
-[![CodeFactor](https://www.codefactor.io/repository/github/fabifelicia/qr-code-component/badge)](https://www.codefactor.io/repository/github/fabifelicia/qr-code-component)
-
-
-
-
-
-
-
-
-
-
-
-
 
 [![CodeFactor](https://www.codefactor.io/repository/github/fabifelicia/cookfy/badge)](https://www.codefactor.io/repository/github/fabifelicia/cookfy)
