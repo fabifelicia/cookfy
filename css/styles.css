@@ -219,10 +219,6 @@ section {
     right: 70px;
 }
 
-.food-plate-2:hover {
-    cursor: pointer;
-}
-
 .left-image {
     width: 80px;
     height: 80px;
@@ -236,11 +232,6 @@ section {
     margin-top: 100px;
 }
 
-.content .modal {    
-    width: 320px;    
-    top: 52px;
-    left: -357px;
-}
 
 .star-classification {
     width: 8px;
