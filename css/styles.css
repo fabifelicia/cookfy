@@ -75,9 +75,8 @@ body {
 
 .search::placeholder {
     font-size: 0.5rem;
-    color: var(--black);
-    margin-left: 20px;
-    margin: 1px 223.1px 0.3px 0;
+    color: var(--black);    
+    margin: 1px 223.1px 0.3px 20px;
     opacity: 0.18;
 }
 
