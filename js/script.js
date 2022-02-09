@@ -1,8 +1,17 @@
-const url = 'https://randomuser.me/api/1.3'
+const URL = 'https://randomuser.me/api/1.3'
 
+const loginUser = (name) => {
+    const nameAvatar = document.querySelector('.name-avatar')    
+    nameAvatar.innerText = name
+}
+
+const photo= (avatar) => {
+    const photoProfile = document.querySelector('.avatar')
+    photoProfile.src = avatar
+}
 
 async function getUser() {
-    const data = await fetch(url)
+    const data = await fetch(URL)
     .then(response => response.json())
     .catch((error) => {
         console.log(error)
@@ -14,8 +23,16 @@ async function getUser() {
 
 async function User() {
     const user = await getUser()
-    const { gender, name, phone, email, picture }  = user  
+    const { gender, name, phone, email, picture }  = user 
     
-    console.log(gender, name.first, name.last, phone, email, picture.medium)
+    loginUser(name.first)
+    photo(picture.thumbnail)
+
+    
+    
+    
+    console.log(gender, name.last, phone, email, picture.medium)
 }
    
+User()
+
