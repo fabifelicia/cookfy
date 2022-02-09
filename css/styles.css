@@ -18,12 +18,16 @@
     box-sizing: border-box;    
 }
 
+html, body {   
+    min-height: 100%;    
+}
 
-html, body { 
+body {
     margin: 0;
-    padding: 0; 
-    height: 100%;    
+    padding: 0;
     background-color: var(--white);
+    width: 960px;
+    /* position: relative; */
 }
 
 /* Header and navigation */
@@ -365,18 +369,21 @@ section {
 
 footer {
     position: absolute;
-    bottom: 0;
-    left:0;
+    bottom: -700px;
+    height: 122px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 footer img {
-    width: 100vw; 
+    width: 100vw;   
    
 }
 
 .footer-description {
-    /* position: absolute; */
-    top: 850px;
+    position: absolute;   
     margin-left: 275px;
     display: flex;
     align-items: center;
@@ -392,9 +399,9 @@ footer img {
 }
 
 .footer-icon {
-    /* position: absolute; */
-    top: 536px;
-    right: 300px;         
+    position: absolute;
+    top: 55px;
+    right: 250px;         
     display: flex;
     align-items: center;
     justify-content: space-between;
