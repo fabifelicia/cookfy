@@ -33,10 +33,13 @@ body {
 
 #header {
     background-color: var(--light-peach);   
-    display: block;       
+    display: flex;   
+    flex-direction: column;  
+    align-items: space-around; 
+    justify-content: center; 
     width: 100vw;
     height: 386px;    
-    padding: 24px 84px 57.4px 40.1px;
+    padding: 24px 80px;
 }
 
 #header nav {
@@ -51,20 +54,20 @@ body {
     align-items: center;
 }
 
-.search {
+.input {
     width: 500px;
     height: 35px;
-    border-radius: 16.5px;    
+    border-radius: 16px;    
     padding: 9px 20px;
     box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
     background-color: var(--white);
     border: none;
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     outline: none;
 }
 
-.search::placeholder {
+.input::placeholder {
     font-size: 0.7rem;
     color: var(--black);  
     opacity: 0.4;
@@ -82,7 +85,8 @@ body {
 .container-user {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    cursor: pointer;
 }
 
 .name-avatar, .text-food {
@@ -90,9 +94,7 @@ body {
     font-size: 0.825rem;
     font-weight: 700;
     color: var(--red);
-    line-height: 1.31;
-    margin-right: 10px;
-    
+    line-height: 1.31;    
 }
 
 .avatar {
@@ -101,29 +103,27 @@ body {
     border-radius: 50%;    
 }
 
-.avatar:hover {
-    cursor:pointer;
-}
-
 /* Header section */
 
-section {
+section {  
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;  
+    height: 100vh;  
 }
 
-.text-container {
-    width: 266.5px;
-    height: 80px;
+.left-figure-section {    
+    height: 136px;    
+}
+
+.text-container {   
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
-    margin-top: 20px;    
+    justify-content: space-between;        
 }
 
-.title {
+.title, .name {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 1.75rem;
@@ -135,55 +135,68 @@ section {
 }
 
 .description {
-    display: block;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    
     font-family: 'Roboto', sans-serif;
     font-size: 0.75rem;
     line-height: 1rem;
-    width: 160px;
-    height: 48px;
     font-weight: bold;
-    color: var(--black-font)
+    color: var(--black-font);
+    margin-top: 20px
 }
 
 .description p:last-child {
     color: var(--red);
 }
 
-.element-2 {
-    width: 137.5px;
-    height: 136.8px;
-    margin-top: 30px;
-}
-
-.element-1 {
-    width: 302.1px;
-    height: 220.5px;      
-}
-
 .images-section {
-    cursor: pointer;
-}
-
-.images-section, .element-1 {
+    cursor: pointer; 
     position: relative;
-    top: 0;
-    left: -20px;    
+    width: 300px;
+    height: 220px;
 }
 
-.food-plate-1 {
-    position: absolute;
-    top: 20px;
-    left: 25px;
+.image-container {
+    position: relative;
+}
+
+/* .right-figure-section {
+    position: relative;
+} */
+
+.ceviche-plate, 
+.right-figure-section,
+.modal
+{     
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);           
+}
+
+.right-figure-section {
+    height: 220px; 
+    width: 300px;
+    z-index: 1;   
+}
+
+.ceviche-plate {  
+    z-index: 2;         
 }
 
 .modal {
-    display:none;   
+    display:none;     
+    z-index: 3;
+    position: absolute;    
+    top: 140px;
 }
 
 .modal .arrow {
     margin-right: 10px;
 }
+
+
 /* main - first section*/
 
 .container {

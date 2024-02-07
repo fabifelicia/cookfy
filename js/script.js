@@ -2,7 +2,7 @@
 // Images events - modal
 const modal1 = document.querySelector('.images-section .modal')
 const modal2 = document.querySelector('.container .modal')
-const plate1 = document.querySelector('.food-plate-1')
+const plate1 = document.querySelector('.ceviche-plate')
 const plate2 = document.querySelector('.food-plate-2')
 
 plate1.addEventListener('mouseover', () => {
