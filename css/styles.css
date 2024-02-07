@@ -19,15 +19,14 @@
 }
 
 html, body {   
-    min-height: 100%;    
+    max-height: 100vh;    
 }
 
 body {
     margin: 0;
     padding: 0;
     background-color: var(--white);
-    width: 960px;
-    /* position: relative; */
+    width: 960px;    
 }
 
 /* Header and navigation */
@@ -42,29 +41,21 @@ body {
 
 #header nav {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 50px;
-    
-}
-
-.logo {
-    width: 67.5px;
-    height: 27px;  
-    margin-left: 13px;  
+    margin-bottom: 50px;    
 }
 
 .input-container {
-    position: relative;
-    
+    display: flex;
+    align-items: center;
 }
 
 .search {
-    width: 366px;
-    height: 30px;
+    width: 500px;
+    height: 35px;
     border-radius: 16.5px;    
-    padding: 9px 22.6px 9.2px 20px;
+    padding: 9px 20px;
     box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
     background-color: var(--white);
     border: none;
@@ -74,18 +65,18 @@ body {
 }
 
 .search::placeholder {
-    font-size: 0.5rem;
-    color: var(--black);    
-    margin: 1px 223.1px 0.3px 20px;
-    opacity: 0.18;
+    font-size: 0.7rem;
+    color: var(--black);  
+    opacity: 0.4;
 }
 
 .search-icon {    
     right: 40px;    
     position: relative;
-    width: 11.8px;
-    height: 11.8px;
-    background-color: #fff;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .container-user {
@@ -96,7 +87,7 @@ body {
 
 .name-avatar, .text-food {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.5rem;
+    font-size: 0.825rem;
     font-weight: 700;
     color: var(--red);
     line-height: 1.31;
@@ -105,12 +96,13 @@ body {
 }
 
 .avatar {
-    height: 30px;
-    width: 30px;
-    background-color: var(--red);   
-    padding: 4.8px 5.8px 4.9px 5.4px;
-    border-radius: 50%;
-    box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
+    width: 40%;    
+    border: 7px solid var(--red);  
+    border-radius: 50%;    
+}
+
+.avatar:hover {
+    cursor:pointer;
 }
 
 /* Header section */
@@ -261,12 +253,12 @@ section {
 }
 
 .btn-circle:hover {
-    background-color: var(--red);
+    background-color: var(--red);    
 }
 
 .arrow {
     width: 8px;
-    height: 8px;
+    height: 8px;    
 }
 
 /* section separation */
@@ -371,18 +363,11 @@ section {
 /* Footer */
 
 footer {
-    position: absolute;
-    bottom: -700px;
-    height: 122px;
-    width: 100%;
+    position: relative;    
+    bottom: -700px;    
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-footer img {
-    width: 100vw;   
-   
 }
 
 .footer-description {

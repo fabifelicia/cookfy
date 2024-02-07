@@ -56,6 +56,9 @@ btnDrinks.addEventListener('mouseout', () => {
     document.getElementById('drinks-name').style.color = '#a19b9b'
 })
 
+// addEventListener('mouseover', () => {
+//     document.querySelector('.facebook').src = './assets/Fb_active.svg'    
+// })
 
 
 //api events
@@ -67,9 +70,16 @@ const loginUser = (name) => {
     nameAvatar.innerText = name
 }
 
-const photo= (avatar) => {
+const nameUser = (name, surname) => {
+    const username = document.querySelector('.name')    
+    username.innerText = `${name} ${surname}`
+}
+
+const photo = (gender) => {
     const photoProfile = document.querySelector('.avatar')
-    photoProfile.src = avatar
+    gender === 'male' ? 
+    photoProfile.src = '../assets/Avatar_masculino.svg' : 
+    photoProfile.src = '../assets/Avatar_feminino.svg'
 }
 
 async function getUser() {
@@ -84,10 +94,11 @@ async function getUser() {
 
 async function User() {
     const user = await getUser()
-    const { gender, name, phone, email, picture }  = user 
+    const { gender, name, phone, email }  = user 
     
     loginUser(name.first)
-    photo(picture.thumbnail)    
+    nameUser(name.first, name.last)
+    photo(gender)    
 }
    
 User()
