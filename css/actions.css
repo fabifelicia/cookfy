@@ -7,6 +7,9 @@
     --black-font:#0d0d0d;
   }
 
+
+
+
 .food-classification-2 button:hover {
     box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.16);         
 }
@@ -18,14 +21,11 @@
 .active {
     background-color: var(--white);
     width: 225px;
-    height: 41.5px;
+    height: 40px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     padding: 15px;
-    position: relative;
-    left: 25px;
-    top: -65px; 
+    transition: 3s all ease;
 }
 
 .content .modal {    

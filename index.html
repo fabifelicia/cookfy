@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookfy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="css/actions.css">
 </head>
@@ -15,7 +20,7 @@
         <nav>
             <img class="logo" src="./assets/Logo_Cookfy.svg" alt="Logo Cookfy">
             <div class="input-container">
-                <input class="search" type="text" placeholder="Pesquise alguma receita">
+                <input class="input type=" text" placeholder="Pesquise alguma receita">
                 <img class="search-icon" src="./assets/Lupa.svg" alt="Search icon">
             </div>
             <div class="container-user">
@@ -24,9 +29,10 @@
             </div>
         </nav>
         <section>
-            <img class='element-2' src="./assets/Elemento_2.svg" alt="Imagem Elemento_2">
+            <img class='left-figure-section' src="./assets/Elemento_2.svg" alt="Imagem à Esquerda">
             <div class="text-container">
-                <h1 class="title">Bem vindo de volta <span class="name">Marina Wedderhoff</span></h1>
+                <h1 class="title">Bem vindo de volta</h1>
+                <span class="name"></span>
                 <div class="description">
                     <p>Contribuição da comunidade:</p>
                     <p>Ceviche de peixe branco</p>
@@ -34,17 +40,23 @@
                 </div>
             </div>
             <div class="images-section">
-                <img class="element-1" src="./assets/Elemento_1.svg" alt="Imagem Elemento_1">
-                <img class="food-plate-1" src="./assets/images/louis-hansel-ZwpX0AJ7GV8-unsplash.png" alt="Food Plate">
-                <div class="modal">
-                    <img class="arrow" src="./assets/Seta_direita.svg" alt="Seta Direita">
-                    <span class="text-food">Ver foto</span>
+                <div class="image-container">
+                    <img class="right-figure-section" src="./assets/Elemento_1.svg" alt="Imagem à Direita">
+                    <img class="ceviche-plate" src="./assets/images/louis-hansel-ZwpX0AJ7GV8-unsplash.png"
+                        alt="Ceviche Plate">
+                    <div class="modal">
+                        <img class="arrow" src="./assets/Seta_direita.svg" alt="Seta Direita">
+                        <span class="text-food">Ver foto</span>
+                    </div>
                 </div>
             </div>
         </section>
     </header>
     <main class="container">
-        <span class="title text-container main-title">Experimente alguma das últimas receitas</span>
+        <div class="text-container">
+            <span class="title text-container">Experimente alguma</span>
+            <span class="title text-container">das últimas receitas</span>
+        </div>
         <img class="right-image" src="./assets/Elemento_7.svg" alt="Right Image">
         <div class="content">
             <img class="food-plate-2" src="./assets/images/patrick-kalkman-HkdQ0zoHT5E-unsplash.png" alt="Food Plate 2">
@@ -64,11 +76,11 @@
                     <img class="star-classification" src="./assets/Estrela.svg" alt="Star classification">
                 </div>
                 <div class="btn">
-                    <button class="btn-circle">
-                        <img class="arrow" src="./assets/Seta_esquerda.svg" alt="Return button">                    
+                    <button class="btn-circle btn-circle-left">
+                        <img class="arrow arrow-active-left" src="./assets/Seta_esquerda.svg" alt="Return button">
                     </button>
-                    <button class="btn-circle">
-                        <img class="arrow" src="./assets/Seta_direita.svg" alt="Forward button">
+                    <button class="btn-circle btn-circle-right">
+                        <img class="arrow arrow-active-right" src="./assets/Seta_direita.svg" alt="Forward button">
                     </button>
                 </div>
             </div>
@@ -96,24 +108,27 @@
                         <span id="drinks-name">Drinks</span>
                     </button>
                 </div>
-                <img class='food-plate-3' src="./assets/images/sebastian-coman-photography-dacM7egRw0Y-unsplash.png" alt="Dessert">
+                <img class='food-plate-3' src="./assets/images/sebastian-coman-photography-dacM7egRw0Y-unsplash.png"
+                    alt="Dessert">
                 <img class="left-image" src="./assets/Elemento_6.svg" alt="Right Bottom Image">
             </div>
         </div>
     </main>
-    
+
     <footer>
-        <img src="./assets/Rodapé.svg" alt="Imagem do Rodapé">
-        <div class="footer-description">
-            <img class="logo logo-footer" src="./assets/Logo_Cookfy.svg" alt="Logo Cookfy">
-            <span class="footer-label">© 2022 Cookfy</span>
-        </div>
-        <div class="footer-icon">
-            <img class="icon" src="./assets/Fb.svg" alt="Facebook icon">
-            <img class="icon" src="./assets/IG.svg" alt="Instagram icon">
-            <img class="icon" src="./assets/Twitter.svg" alt="Twitter icon">
-            <img class="icon" src="./assets/Linkedin.svg" alt="LinkedIn icon">
-            <img class="icon" src="./assets/Pinterest.svg" alt="Pinterest icon">
+        <img class='.footer-image' src="./assets/Rodapé.svg" alt="Imagem do Rodapé">
+        <div class='footer-container'>
+            <div class="footer-description">
+                <img class="logo footer-logo" src="./assets/Logo_Cookfy.svg" alt="Logo Cookfy">
+                <span class="footer-label">© 2022 Cookfy</span>
+            </div>
+            <div class="footer-icon">
+                <img class="icon facebook" src="./assets/Fb.svg" alt="Facebook icon">
+                <img class="icon instagram" src="./assets/IG.svg" alt="Instagram icon">
+                <img class="icon twitter" src="./assets/Twitter.svg" alt="Twitter icon">
+                <img class="icon linkedin" src="./assets/Linkedin.svg" alt="Linkedin icon">
+                <img class="icon pinterest" src="./assets/Pinterest.svg" alt="Pinterest icon">
+            </div>
         </div>
     </footer>
     <script src="./js/script.js"></script>

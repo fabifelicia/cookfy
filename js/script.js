@@ -2,8 +2,14 @@
 // Images events - modal
 const modal1 = document.querySelector('.images-section .modal')
 const modal2 = document.querySelector('.container .modal')
-const plate1 = document.querySelector('.food-plate-1')
+const plate1 = document.querySelector('.ceviche-plate')
 const plate2 = document.querySelector('.food-plate-2')
+const iconFb = document.querySelector('.facebook')
+const iconIg = document.querySelector('.instagram')
+const iconTwitter = document.querySelector('.twitter')
+const iconLinkedin = document.querySelector('.linkedin')
+const iconPinterest = document.querySelector('.pinterest')
+
 
 plate1.addEventListener('mouseover', () => {
     modal1.classList.add('active')
@@ -21,10 +27,27 @@ plate2.addEventListener('mouseout', () => {
     modal2.classList.toggle('active')
 })
 
+document.querySelector('.btn-circle-right').addEventListener('mouseover', () => {
+    document.querySelector('.arrow-active-right').src = '../assets/Seta_direita_branca.svg'
+})
+
+document.querySelector('.btn-circle-right').addEventListener('mouseout', () => {
+    document.querySelector('.arrow-active-right').src = '../assets/Seta_direita.svg'
+})
+
+document.querySelector('.btn-circle-left').addEventListener('mouseover', () => {
+    document.querySelector('.arrow-active-left').src = '../assets/Seta_esquerda_branca.svg'
+})
+
+document.querySelector('.btn-circle-left').addEventListener('mouseout', () => {
+    document.querySelector('.arrow-active-left').src = '../assets/Seta_esquerda.svg'
+})
+
 
 //Buttons events
 
 const [btnCook, btnPatisserie, btnDrinks] = document.querySelectorAll('.food-classification-2 button')
+
 
 btnCook.addEventListener('mouseover', () => {
     document.getElementById('cook').src = './assets/Cozinha_active.svg'
@@ -56,6 +79,45 @@ btnDrinks.addEventListener('mouseout', () => {
     document.getElementById('drinks-name').style.color = '#a19b9b'
 })
 
+iconFb.addEventListener('mouseover', () => {
+    document.querySelector('.facebook').src = './assets/Fb_active.svg'    
+})
+
+iconFb.addEventListener('mouseout', () => {
+    document.querySelector('.facebook').src = './assets/Fb.svg'    
+})
+
+iconPinterest.addEventListener('mouseover', () => {
+    document.querySelector('.pinterest').src = './assets/Pinterest_active.svg'    
+})
+
+iconPinterest.addEventListener('mouseout', () => {
+    document.querySelector('.pinterest').src = './assets/Pinterest.svg'    
+})
+
+iconIg.addEventListener('mouseover', () => {
+    document.querySelector('.instagram').src = './assets/IG_active.svg'    
+})
+
+iconIg.addEventListener('mouseout', () => {
+    document.querySelector('.instagram').src = './assets/IG.svg'    
+})
+
+iconTwitter.addEventListener('mouseover', () => {
+    document.querySelector('.twitter').src = './assets/Twitter_active.svg'    
+})
+
+iconTwitter.addEventListener('mouseout', () => {
+    document.querySelector('.twitter').src = './assets/Twitter.svg'    
+})
+
+iconLinkedin.addEventListener('mouseover', () => {
+    document.querySelector('.linkedin').src = './assets/Linkedin_active.svg'    
+})
+
+iconLinkedin.addEventListener('mouseout', () => {
+    document.querySelector('.linkedin').src = './assets/Linkedin.svg'    
+})
 
 
 //api events
@@ -67,9 +129,16 @@ const loginUser = (name) => {
     nameAvatar.innerText = name
 }
 
-const photo= (avatar) => {
+const nameUser = (name, surname) => {
+    const username = document.querySelector('.name')    
+    username.innerText = `${name} ${surname}`
+}
+
+const photo = (gender) => {
     const photoProfile = document.querySelector('.avatar')
-    photoProfile.src = avatar
+    gender === 'male' ? 
+    photoProfile.src = '../assets/Avatar_masculino.svg' : 
+    photoProfile.src = '../assets/Avatar_feminino.svg'
 }
 
 async function getUser() {
@@ -84,10 +153,11 @@ async function getUser() {
 
 async function User() {
     const user = await getUser()
-    const { gender, name, phone, email, picture }  = user 
+    const { gender, name, phone, email }  = user 
     
     loginUser(name.first)
-    photo(picture.thumbnail)    
+    nameUser(name.first, name.last)
+    photo(gender)    
 }
    
 User()
