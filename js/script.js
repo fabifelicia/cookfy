@@ -21,6 +21,22 @@ plate2.addEventListener('mouseout', () => {
     modal2.classList.toggle('active')
 })
 
+document.querySelector('.btn-circle-right').addEventListener('mouseover', () => {
+    document.querySelector('.arrow-active-right').src = '../assets/Seta_direita_branca.svg'
+})
+
+document.querySelector('.btn-circle-right').addEventListener('mouseout', () => {
+    document.querySelector('.arrow-active-right').src = '../assets/Seta_direita.svg'
+})
+
+document.querySelector('.btn-circle-left').addEventListener('mouseover', () => {
+    document.querySelector('.arrow-active-left').src = '../assets/Seta_esquerda_branca.svg'
+})
+
+document.querySelector('.btn-circle-left').addEventListener('mouseout', () => {
+    document.querySelector('.arrow-active-left').src = '../assets/Seta_esquerda.svg'
+})
+
 
 //Buttons events
 
