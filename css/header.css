@@ -165,8 +165,11 @@ section {
   z-index: 3;
   position: absolute;
   top: 140px;
+  width: 225px;
+  height: 40px;
 }
 
-.modal-ceviche .arrow {
+.modal-ceviche .arrow,
+.modal-recipe .arrow {
   margin-right: 10px;
 }

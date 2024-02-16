@@ -1,8 +1,8 @@
 // Images events - modal
 const modal1 = document.querySelector('.modal-ceviche')
-const modal2 = document.querySelector('.container .modal')
+const modal2 = document.querySelector('.modal-recipe')
 const plate1 = document.querySelector('.ceviche-plate')
-const plate2 = document.querySelector('.food-plate-2')
+const plate2 = document.querySelector('.last-recipes')
 
 const iconFb = document.querySelector('.facebook')
 const iconIg = document.querySelector('.instagram')
@@ -68,6 +68,7 @@ plate2.addEventListener('mouseout', () => {
 
 document.querySelector('.btn-circle-right').addEventListener('mouseover', () => {
   document.querySelector('.arrow-active-right').src = '../assets/Seta_direita_branca.svg'
+  document.querySelector('.arrow-active-right').style.scale = '1.2'
 })
 
 document.querySelector('.btn-circle-right').addEventListener('mouseout', () => {
@@ -76,10 +77,11 @@ document.querySelector('.btn-circle-right').addEventListener('mouseout', () => {
 
 document.querySelector('.btn-circle-left').addEventListener('mouseover', () => {
   document.querySelector('.arrow-active-left').src = '../assets/Seta_esquerda_branca.svg'
+  document.querySelector('.arrow-active-left').style.scale = '1.2'
 })
 
 document.querySelector('.btn-circle-left').addEventListener('mouseout', () => {
-  document.querySelector('.arrow-active-left').src = '../assets/Seta_esquerda.svg'
+  document.querySelector('.arrow-active-left').src = '../assets/Seta_esquerda.svg'  
 })
 
 

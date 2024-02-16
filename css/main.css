@@ -22,16 +22,30 @@
   height: 80px;
 }
 
-.content {
+.recipes-container {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
 }
 
-.star-classification {
+.image-recipe-container {
+  position: relative;
+}
+
+.modal-recipe {
+  display: none;
+  position: absolute;
+  top: 150px;
+  left: 37px;
+  width: 320px;
+  height: 40px;
+}
+
+.star-classification,
+.arrow {
   width: 8px;
-  height: 7.6px;
+  height: 8px;
 }
 
 .star-classification:nth-child(4),
@@ -59,11 +73,7 @@
 
 .btn-circle:hover {
   background-color: var(--red);
-}
-
-.arrow {
-  width: 8px;
-  height: 8px;
+  scale: 1.2;
 }
 
 /* section separation */
