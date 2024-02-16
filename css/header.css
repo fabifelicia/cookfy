@@ -143,7 +143,7 @@ section {
 
 .ceviche-plate,
 .right-figure-section,
-.modal {
+.modal-ceviche {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -160,13 +160,13 @@ section {
   z-index: 2;
 }
 
-.modal {
+.modal-ceviche {
   display: none;
   z-index: 3;
   position: absolute;
   top: 140px;
 }
 
-.modal .arrow {
+.modal-ceviche .arrow {
   margin-right: 10px;
 }
