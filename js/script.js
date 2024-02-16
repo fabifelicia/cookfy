@@ -127,8 +127,8 @@ btnDrinks.addEventListener('mouseout', () => {
   document.getElementById('drinks-name').style.color = '#a19b9b'
 })
 
-btnDrinks.addEventListener('click', () => {
-  document.getElementById('drinks').src = './assets/Drinks_active.svg'  
+btnDrinks.addEventListener('click', () => {  
+  document.querySelector('.world-food-plate').src = './assets/images/Drink.jpg'
 })
 
 //api events
