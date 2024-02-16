@@ -1,15 +1,54 @@
-
 // Images events - modal
 const modal1 = document.querySelector('.images-section .modal')
 const modal2 = document.querySelector('.container .modal')
 const plate1 = document.querySelector('.ceviche-plate')
 const plate2 = document.querySelector('.food-plate-2')
+
 const iconFb = document.querySelector('.facebook')
 const iconIg = document.querySelector('.instagram')
 const iconTwitter = document.querySelector('.twitter')
 const iconLinkedin = document.querySelector('.linkedin')
 const iconPinterest = document.querySelector('.pinterest')
 
+iconFb.addEventListener('mouseover', () => {
+  document.querySelector('.facebook').src = './assets/Fb_active.svg'    
+})
+
+iconFb.addEventListener('mouseout', () => {
+  document.querySelector('.facebook').src = './assets/Fb.svg'    
+})
+
+iconPinterest.addEventListener('mouseover', () => {
+  document.querySelector('.pinterest').src = './assets/Pinterest_active.svg'    
+})
+
+iconPinterest.addEventListener('mouseout', () => {
+  document.querySelector('.pinterest').src = './assets/Pinterest.svg'    
+})
+
+iconIg.addEventListener('mouseover', () => {
+  document.querySelector('.instagram').src = './assets/IG_active.svg'    
+})
+
+iconIg.addEventListener('mouseout', () => {
+  document.querySelector('.instagram').src = './assets/IG.svg'    
+})
+
+iconTwitter.addEventListener('mouseover', () => {
+  document.querySelector('.twitter').src = './assets/Twitter_active.svg'    
+})
+
+iconTwitter.addEventListener('mouseout', () => {
+  document.querySelector('.twitter').src = './assets/Twitter.svg'    
+})
+
+iconLinkedin.addEventListener('mouseover', () => {
+  document.querySelector('.linkedin').src = './assets/Linkedin_active.svg'    
+})
+
+iconLinkedin.addEventListener('mouseout', () => {
+  document.querySelector('.linkedin').src = './assets/Linkedin.svg'    
+})
 
 plate1.addEventListener('mouseover', () => {
     modal1.classList.add('active')
@@ -78,47 +117,6 @@ btnDrinks.addEventListener('mouseout', () => {
     document.getElementById('drinks').src = './assets/Drinks.svg'
     document.getElementById('drinks-name').style.color = '#a19b9b'
 })
-
-iconFb.addEventListener('mouseover', () => {
-    document.querySelector('.facebook').src = './assets/Fb_active.svg'    
-})
-
-iconFb.addEventListener('mouseout', () => {
-    document.querySelector('.facebook').src = './assets/Fb.svg'    
-})
-
-iconPinterest.addEventListener('mouseover', () => {
-    document.querySelector('.pinterest').src = './assets/Pinterest_active.svg'    
-})
-
-iconPinterest.addEventListener('mouseout', () => {
-    document.querySelector('.pinterest').src = './assets/Pinterest.svg'    
-})
-
-iconIg.addEventListener('mouseover', () => {
-    document.querySelector('.instagram').src = './assets/IG_active.svg'    
-})
-
-iconIg.addEventListener('mouseout', () => {
-    document.querySelector('.instagram').src = './assets/IG.svg'    
-})
-
-iconTwitter.addEventListener('mouseover', () => {
-    document.querySelector('.twitter').src = './assets/Twitter_active.svg'    
-})
-
-iconTwitter.addEventListener('mouseout', () => {
-    document.querySelector('.twitter').src = './assets/Twitter.svg'    
-})
-
-iconLinkedin.addEventListener('mouseover', () => {
-    document.querySelector('.linkedin').src = './assets/Linkedin_active.svg'    
-})
-
-iconLinkedin.addEventListener('mouseout', () => {
-    document.querySelector('.linkedin').src = './assets/Linkedin.svg'    
-})
-
 
 //api events
 
