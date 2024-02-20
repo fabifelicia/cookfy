@@ -11,7 +11,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/actions.css">
 </head>
 
@@ -44,7 +48,7 @@
                     <img class="right-figure-section" src="./assets/Elemento_1.svg" alt="Imagem à Direita">
                     <img class="ceviche-plate" src="./assets/images/louis-hansel-ZwpX0AJ7GV8-unsplash.png"
                         alt="Ceviche Plate">
-                    <div class="modal">
+                    <div class="modal-ceviche">
                         <img class="arrow" src="./assets/Seta_direita.svg" alt="Seta Direita">
                         <span class="text-food">Ver foto</span>
                     </div>
@@ -58,17 +62,21 @@
             <span class="title text-container">das últimas receitas</span>
         </div>
         <img class="right-image" src="./assets/Elemento_7.svg" alt="Right Image">
-        <div class="content">
-            <img class="food-plate-2" src="./assets/images/patrick-kalkman-HkdQ0zoHT5E-unsplash.png" alt="Food Plate 2">
-            <div class="modal">
-                <img class="arrow" src="./assets/Seta_direita.svg" alt="Seta Direita">
-                <span class="text-food">Ver receita</span>
+        <div class="recipes-container">
+            <div class="image-recipe-container">
+                <img class="last-recipes" src="./assets/images/patrick-kalkman-HkdQ0zoHT5E-unsplash.png"
+                    alt="Last Recipes">
+
+                <div class="modal-recipe">
+                    <img class="arrow" src="./assets/Seta_direita.svg" alt="Seta Direita">
+                    <span class="text-food">Ver receita</span>
+                </div>
             </div>
             <div class="description-food">
-                <span class="text-food">Adicionado Ontem</span>
+                <span class="text-food" id='text-time-add'>Adicionado Ontem</span>
                 <div class="food-title">Sanduíche de tomate com salada de ovos</div>
                 <div class="food-classification">
-                    <span class="text-food">Fácil</span>
+                    <span class="text-food" id='classification-recipe'>Fácil</span>
                     <img class="star-classification" src="./assets/Estrela.svg" alt="Star classification">
                     <img class="star-classification" src="./assets/Estrela.svg" alt="Star classification">
                     <img class="star-classification" src="./assets/Estrela.svg" alt="Star classification">
@@ -108,8 +116,8 @@
                         <span id="drinks-name">Drinks</span>
                     </button>
                 </div>
-                <img class='food-plate-3' src="./assets/images/sebastian-coman-photography-dacM7egRw0Y-unsplash.png"
-                    alt="Dessert">
+                <img class='world-food-plate' src="./assets/images/sebastian-coman-photography-dacM7egRw0Y-unsplash.png"
+                    alt="gastronomic-food-plate">
                 <img class="left-image" src="./assets/Elemento_6.svg" alt="Right Bottom Image">
             </div>
         </div>
@@ -131,7 +139,7 @@
             </div>
         </div>
     </footer>
-    <script src="./js/script.js"></script>
+    <script type='text/javascript' src="./js/script.js"></script>
 </body>
 
 </html>
