@@ -140,34 +140,42 @@
         </div>
     </footer>
     <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
-    new BlipWidget()
-        .withAppKey(BLIP_KEY)
-        .withButton({
-          color: '#007858',
-          icon: chatIcon
-        })
-        .withAuth({
-          authType: BlipWidget.DEV_AUTH,
-          userIdentity: CryptoUtils.sha256(usercpf + USER_SALT_CODE),
-          userPassword: CryptoUtils.sha256(usercpf + PASSWORD_SALT_CODE)
-        })
-        .withAccount({
-          extras: {
-            isLoggedIn: true,
-            loginSource: 'Portal Alelo',
-            allowedDocuments: {
-              isTooMany: uniqueCNPJsList.length > 100,
-              cnpjList: uniqueCNPJsList.length > 100 ? [] : uniqueCNPJsList
+    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
+    <script>
+        (function () {
+            window.onload = function () {
+            new BlipWidget()
+            .withAppKey(BLIP_KEY)
+            .withButton({
+              color: '#007858',
+              icon: chatIcon
+            })
+            .withAuth({
+              authType: BlipWidget.DEV_AUTH,
+              userIdentity: CryptoUtils.sha256(usercpf + USER_SALT_CODE),
+              userPassword: CryptoUtils.sha256(usercpf + PASSWORD_SALT_CODE)
+            })
+            .withAccount({
+              extras: {
+                isLoggedIn: true,
+                loginSource: 'Portal Alelo',
+                allowedDocuments: {
+                  isTooMany: uniqueCNPJsList.length > 100,
+                  cnpjList: uniqueCNPJsList.length > 100 ? [] : uniqueCNPJsList
+                }
+              }
+            })
+            .withEventHandler(BlipWidget.ENTER_EVENT, function () {
+              onInteractionChatBlip('iniciar-chat');
+            })
+            .withEventHandler(BlipWidget.LEAVE_EVENT, function () {
+              onInteractionChatBlip('fechar-chat');
+            })
+            .build();
             }
-          }
-        })
-        .withEventHandler(BlipWidget.ENTER_EVENT, function () {
-          onInteractionChatBlip('iniciar-chat');
-        })
-        .withEventHandler(BlipWidget.LEAVE_EVENT, function () {
-          onInteractionChatBlip('fechar-chat');
-        })
-        .build();  
+        })();
+    </script>
+            
     <script type='text/javascript' src="./js/script.js"></script>
 </body>
 
