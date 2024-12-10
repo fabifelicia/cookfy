@@ -138,39 +138,7 @@
                 <img class="icon pinterest" src="./assets/Pinterest.svg" alt="Pinterest icon">
             </div>
         </div>
-    </footer>
-    <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
-    <script>
-        (function () {
-            window.onload = function () {
-                var blipClient = new BlipChat();
-                blipClient
-                    .withAppKey('aG1ncm91dGVyZWNzOjBlMjE2ZDI3LWE4OGYtNGI1OS1hNTQ3LTQ4Y2RkYjQ5MDhkYg==')
-                    .withButton({ "color": "#007f61", "icon": "" })
-                    .withCustomCommonUrl('https://alelobrasil.chat.blip.ai/')
-                    .withEventHandler(BlipChat.LOAD_EVENT, function () {
-                        blipClient.sendCommand({
-                            id: "ag0asd0as-daasdasd0a",
-                            to: 'postmaster@crm.msging.net',
-                            method: Lime.CommandMethod.MERGE,
-                            uri: '/contacts',
-                            type: "application/vnd.lime.contact+json",
-                            resource: {
-                                "identity" : "9527e748-213d-499e-ba7d-64a0cd1860f0.hmgrouterecs@0mn.io",
-                                "name": "Teste",
-                                "extras": {
-                                    "isLoggedIn": true,
-                                    "loginSource": 'Portal Alelo',
-                                    "CNPJs": ["123123312333"],
-                                }
-                            }
-
-                        })
-                            .build();
-                    })
-            }
-        })();
-    </script>
+    </footer>   
     <script type='text/javascript' src="./js/script.js"></script>
 </body>
 
