@@ -154,27 +154,27 @@
     <script>
         (function () {
             window.onload = function () {
-                new BlipChat()
-                    .withAppKey('c2FtdWJvdDE6ZjMxOGJhNGQtNTUxYy00MmM5LThlMTktMWVlYzBlN2RhOWI0')
+                var blipClient = new BlipChat();
+                blipClient.withAppKey('c2FtdWJvdDE6ZjMxOGJhNGQtNTUxYy00MmM5LThlMTktMWVlYzBlN2RhOWI0')
                     .withButton({ "color": "#0096fa", "icon": "" })
                     .withCustomCommonUrl('https://fabiana-barreto-t3cip.chat.blip.ai/')
                     .withEventHandler(BlipChat.LOAD_EVENT, function () {
-                sendCommand({
-                    id: "ag0asd0as-daasdasd0a",
-                    to: 'postmaster@crm.msging.net',
-                    method: Lime.CommandMethod.MERGE,
-                    uri: '/contacts',
-                    type: "application/vnd.lime.contact+json",
-                    resource: {
-                        "identity": "d4f62ca2-d8a3-4e06-b01a-7775997659bc.hmgrouterecs@0mn.io",                
-                        "extras": {
-                            "isLoggedIn": true,
-                            "loginSource": 'Portal Alelo',
-                            "allowedDocuments": `["123123456"]`
-                        }
-                    }
-                })
-            })
+                        blipClient.sendCommand({
+                            id: "ag0asd0as-daasdasd0a",
+                            to: 'postmaster@crm.msging.net',
+                            method: Lime.CommandMethod.MERGE,
+                            uri: '/contacts',
+                            type: "application/vnd.lime.contact+json",
+                            resource: {
+                                "identity": "ab37a3ae-ce59-4e07-b153-0ab9aea4a887.samubot1@0mn.io",
+                                "extras": {
+                                    "isLoggedIn": true,
+                                    "loginSource": 'Portal Alelo',
+                                    "allowedDocuments": `["123123456"]`
+                                }
+                            }
+                        })
+                    })
                     .build();
             }
         })();
