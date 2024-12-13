@@ -161,18 +161,11 @@
                     .withEventHandler(BlipChat.LOAD_EVENT, function () {
                         blipClient.sendCommand({
                             id: "36b8f84d-df4e-4d49-b662-bcde71a8764f",
-                            to: 'postmaster@crm.msging.net',
-                            method: 'merge',
-                            uri: '/contacts',
-                            type: "application/vnd.lime.contact+json",
-                            resource: {
-                                "identity": "a569b154-5083-44fb-b8d1-e8f2a22a66ee.devrouterecs@0mn.io",
-                                "extras": {
-                                    "isLoggedIn": true,
-                                    "loginSource": 'Portal Alelo',
-                                    "allowedDocuments": `["123123456"]`
-                                }
-                            }
+                            to: 'postmaster@builder.msging.net',
+                            method: 'set',
+                            uri: '/contexts/a569b154-5083-44fb-b8d1-e8f2a22a66ee.devrouterecs@0mn.io/test',
+                            type: "text/plain",
+                            resource: "loginSource: Portal Alelo"               
                         })
                     })
                     .build();
