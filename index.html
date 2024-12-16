@@ -160,7 +160,7 @@
                     .withCustomCommonUrl('https://alelobrasil.chat.blip.ai/')
                     .withEventHandler(BlipChat.LOAD_EVENT, function () {
                         blipClient.sendCommand({
-                            id: Guid(),
+                            id: Lime.Guid(),
                             to: 'postmaster@crm.msging.net',
                             method: 'merge',
                             uri: '/contacts',
