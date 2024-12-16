@@ -152,32 +152,27 @@
     <script type='text/javascript' src="./js/script.js"></script>
     <script src="https://unpkg.com/blip-chat-widget@1.11.*" type="text/javascript"></script>
     <script>
-        (function () {
-            window.onload = function () {
-                function uuidv4() {
-                    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-                        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-                        return v.toString(16);
-                    });
-                }
+       (function () {
+            window.onload = function () {                
                 var blipClient = new BlipChat();
                 blipClient.withAppKey('ZGV2cm91dGVyZWNzOjY3ZmNlZTgyLTc3ZDEtNDg0Yi05YjViLTE1ODdkY2Y4ZjE5Yg==')
-                    .withButton({ "color": "#0096fa", "icon": "" })
+                    .withButton({ "color": "#000000", "icon": "" })
                     .withCustomCommonUrl('https://alelobrasil.chat.blip.ai/')
                     .withEventHandler(BlipChat.LOAD_EVENT, function () {
                         blipClient.sendCommand({
-                            id: uuidv4(),
+                            id: Guid(),
                             to: 'postmaster@crm.msging.net',
                             method: 'merge',
                             uri: '/contacts',
                             type: "application/vnd.lime.contact+json",
-                            resource: {
-                                "identity": "83ca69db-ceb6-4b15-902e-5b9c9adefe30.devrouterecs@0mn.io",
+                            resource: {  
+                                "identity": '{{$user_identity}}',                              
                                 "extras": {
                                     "isLoggedIn": true,
                                     "loginSource": 'Portal Alelo',
                                     "allowedDocuments": `["123123456"]`
-                                }
+                                },
+                                "source": "{{$user_channel_name}}"
                             }
                         })
                     })
