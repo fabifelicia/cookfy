@@ -153,14 +153,20 @@
     <script src="https://unpkg.com/blip-chat-widget@1.11.*" type="text/javascript"></script>
     <script>
        (function () {
-            window.onload = function () {                
+            window.onload = function () {  
+                function uuidv4() {
+                        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                            return v.toString(16);
+                        });
+                    }
                 var blipClient = new BlipChat();
                 blipClient.withAppKey('ZGV2cm91dGVyZWNzOjY3ZmNlZTgyLTc3ZDEtNDg0Yi05YjViLTE1ODdkY2Y4ZjE5Yg==')
                     .withButton({ "color": "#000000", "icon": "" })
                     .withCustomCommonUrl('https://alelobrasil.chat.blip.ai/')
                     .withEventHandler(BlipChat.LOAD_EVENT, function () {
                         blipClient.sendCommand({
-                            id: Lime.Guid(),
+                            id: uuidv4(),
                             to: 'postmaster@crm.msging.net',
                             method: 'merge',
                             uri: '/contacts',
