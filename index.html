@@ -154,20 +154,34 @@
     <script>
         (function () {
             window.onload = function () {
+                function uuidv4() {
+                    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                        return v.toString(16);
+                    });
+                }
                 var blipClient = new BlipChat();
                 blipClient.withAppKey('ZGV2cm91dGVyZWNzOjY3ZmNlZTgyLTc3ZDEtNDg0Yi05YjViLTE1ODdkY2Y4ZjE5Yg==')
-                    .withButton({ "color": "#000000", "icon": "" })
+                    .withButton({ "color": "#0096fa", "icon": "" })
                     .withCustomCommonUrl('https://alelobrasil.chat.blip.ai/')
                     .withEventHandler(BlipChat.LOAD_EVENT, function () {
                         blipClient.sendCommand({
-                            id: "36b8f84d-df4e-4d49-b662-bcde71a8764f",
-                            to: 'postmaster@builder.msging.net',
-                            method: 'set',
-                            uri: '/contexts/a569b154-5083-44fb-b8d1-e8f2a22a66ee.devrouterecs@0mn.io/test',
-                            type: "text/plain",
-                            resource: "loginSource: Portal Alelo"               
+                            id: uuidv4(),
+                            to: 'postmaster@crm.msging.net',
+                            method: 'merge',
+                            uri: '/contacts',
+                            type: "application/vnd.lime.contact+json",
+                            resource: {
+                                "identity": "ab37a3ae-ce59-4e07-b153-0ab9aea4a887.samubot1@0mn.io",
+                                "extras": {
+                                    "isLoggedIn": true,
+                                    "loginSource": 'Portal Alelo',
+                                    "allowedDocuments": `["123123456"]`
+                                }
+                            }
                         })
                     })
+                    .withoutHistory()
                     .build();
             }
         })();
