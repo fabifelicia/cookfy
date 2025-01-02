@@ -150,7 +150,47 @@
         </div>
     </footer>   
     <script type='text/javascript' src="./js/script.js"></script>
-   
+   <script src="https://unpkg.com/blip-chat-widget@1.11.*" type="text/javascript"></script>
+    <script>
+        (function () {
+            const uniqueCNPJsList = ['1234567892015', '123456789521']
+            window.onload = function () {
+                var builder = new BlipChat()
+
+                    .withAppKey("ZGV2cm91dGVyZWNzOjY3ZmNlZTgyLTc3ZDEtNDg0Yi05YjViLTE1ODdkY2Y4ZjE5Yg==")
+                    .withCustomMessageMetadata({
+                        "user origin": "browser",
+                        "allowedDocuments": {
+                            isTooMany: uniqueCNPJsList.length > 100,
+                            cnpjList: uniqueCNPJsList.length > 100 ? [] : uniqueCNPJsList
+                        }
+                    })
+                    .withButton({
+                        color: '#007858',
+                        icon: ""
+                    })
+                    .withAuth({
+                        authType: BlipChat.DEV_AUTH,
+                        userIdentity: '1234567',
+                        userPassword: 'MTIzNDU2'
+                    })
+                    .withAccount({
+                        phoneNumber: '+15055034455',
+                        extras: {
+                            isLoggedIn: true,
+                            loginSource: 'Portal Alelo'
+                        }
+                    })
+                    .withEventHandler(BlipChat.ENTER_EVENT, function () {
+                        console.log('iniciar-chat');
+                    })
+                    .withEventHandler(BlipChat.LEAVE_EVENT, function () {
+                        console.log('fechar-chat');
+                    })
+                    builder.build();
+            }
+        })();
+    </script>
 </body>
 
 </html>
